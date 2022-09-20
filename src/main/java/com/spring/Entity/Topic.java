@@ -10,27 +10,27 @@ public class Topic {
 	
 	@Id
 	@GeneratedValue
-	private String id;
+	private int id;
 
 	private String name;
-	private String desc;
+	private String desc_;
 	
-//	
-//	public Topic(){
-//		
-//	}
+
+	public Topic(){
+
+	}
 	
 	
-	public Topic(String id, String name, String desc) {
+	public Topic(int id, String name, String desc) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.desc = desc;
+		this.desc_ = desc;
 	}
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -40,10 +40,10 @@ public class Topic {
 		this.name = name;
 	}
 	public String getDesc() {
-		return desc;
+		return desc_;
 	}
 	public void setDesc(String desc) {
-		this.desc = desc;
+		this.desc_ = desc;
 	}
 	
 

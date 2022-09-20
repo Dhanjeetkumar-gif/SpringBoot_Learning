@@ -27,7 +27,7 @@ public class TopicController {
 		
 	}
 @RequestMapping("/topics/{id}")
-public Optional<Topic> getTopicById(@PathVariable String id) {
+public Optional<Topic> getTopicById(@PathVariable int id) {
 	return topicService.getTopicById(id);
 }
 
@@ -42,7 +42,7 @@ public void updateTopic(@RequestBody Topic topic,@PathVariable int id) {
 	topicService.updateTopic(id, topic);
 }
 @RequestMapping(method=RequestMethod.DELETE,value="topics/{id}")
-public void deleteTopic(@PathVariable String id) {
+public void deleteTopic(@PathVariable int id) {
 	topicService.deleteTopic(id);
 	
 	

@@ -31,7 +31,7 @@ public class TopicService {
 		return topics;
 		
 	}
-   public Optional<Topic> getTopicById(String id) {
+   public Optional<Topic> getTopicById(int id) {
 	  // String ids=String.valueOf(id);
 	 return  topicRepository.findById(id);
 	  // return alltopics.stream().filter(t-> t.getId()==id).findFirst().get();
@@ -53,7 +53,7 @@ public void updateTopic(int id, Topic topic) {
 //	}
 //	
 }
-public void deleteTopic(String id) {
+public void deleteTopic(int id) {
 	//String ids=String.valueOf(id);
 	topicRepository.deleteById(id);
 
